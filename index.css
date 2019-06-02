@@ -23,7 +23,10 @@
   .results {
     list-style: none;
   }
-  
+  p.ingredients {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 
   .icons {
     border-radius: 50px;
