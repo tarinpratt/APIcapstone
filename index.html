@@ -6,6 +6,8 @@
    
     <title>Picky Eater</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+
      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
@@ -15,20 +17,23 @@
         <h2>Find recipes that cater to your food restriction needs.</h2>
     <form class="recipeForm">
           <label for="recipeRestrictions">
-          <h3>Do you have a nut allergy?</h3>
-          <input type="checkbox" name="peanut-free" value="peanut-free">Peanut Allergy
-          <input type="checkbox" name="tree-nut-free" value="tree-nut-free">Tree Nut Allergy
-          <h3>Do you love animals?</h3>
-          <input type="checkbox" 
+          
+          <img src="images/nonuts.jpg" class="icons"alt="no nut image">
+          <input type="checkbox" class="checkbox" name="peanut-free" value="peanut-free">Peanut Allergy
+          <input type="checkbox" class="checkbox" name="tree-nut-free" value="tree-nut-free">Tree Nut Allergy
+          
+          <img src="images/vegan.jpg" class="icons" alt="vegan image">
+          <input type="checkbox" class="checkbox"
           name="vegan" value="vegan">Yes, I'm Vegan
-          <input type="checkbox" name="vegetarian" value="vegetarian">Yes, I'm Vegetarian
+          <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
+          <input type="checkbox" class="checkbox" name="vegetarian" value="vegetarian">Yes, I'm Vegetarian
           <label for="listOfRecipes"></label>
           <input placeholder="ANY and ALL ingredients here!" type="text" name="listOfRecipes" id="listOfRecipes" required/>
           <input class="submitButton" type="submit">
     </form>
     </div>
     <div class="results hidden"><ul></ul></div>
-    <footer id="edamam-badge" data-color="white"></footer>
+    <footer id="edamam-badge" data-color="transparent"></footer>
     <script src="index.js"></script>
 </body>
 </html>
