@@ -18,13 +18,17 @@ for (let i = 0; i < responseJson.hits.length; i++){
   let sepDietLabels = dietLabels.join(', ');
   let calories = responseJson.hits[i].recipe.calories;
   let newCal = calories.toFixed();
+  let ingredients = responseJson.hits[i].recipe.ingredientLines;
+  let ingredientList = ingredients.join(', ');
 
 $('.results').append(`
 <li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3>
   <a href=${responseJson.hits[i].recipe.url} target="_blank"><img class="foodImg" src='${responseJson.hits[i].recipe.image}'></a>
 <p class="diet">${sepDietLabels}</p>
 <p class="health">${sepLabels}</p>
+<p class="ingredients">${ingredientList}</p>
 <p class="calories">Calories: ${newCal}</p>
+
 `)
 };
 $('.results').removeClass('hidden');
