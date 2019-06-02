@@ -1,0 +1,52 @@
+*  {
+    box-sizing: border-box;
+  }
+  body {
+    text-align: center;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .results {
+    list-style: none;
+  }
+  input {
+    display: inline-block;
+  }
+  input:hover {
+    cursor: pointer;
+  }
+   #listOfRecipes {
+     display: block;
+     margin-top: 10px;
+     padding: 10px;
+     width: 300px;
+     border-radius: 5px;
+     margin-right: auto;
+     margin-left: auto;
+     text-align: center;
+   }
+   li h3 a {
+     text-decoration: none;
+   }
+   li h3 a:hover {
+     color: orange;
+   }
+  
+   .submitButton {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 10px;
+     padding: 5px;
+     border-radius: 5px;
+   }
+   img:hover {
+     border: yellow 4px solid;
+     border-radius: 10px;
+   }
+  
+  footer {
+    padding-top: 300px;
+  }
