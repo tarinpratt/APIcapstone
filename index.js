@@ -39,7 +39,7 @@ return checkedValues;
 
 function buildSearchUrl(textValue, checkedValues) {
 let rootUrl = 'https://api.edamam.com/search?q=' + textValue;
-let endUrl = '&app_id=bddad298&app_key=aef7ebaa03f59a99ac50f1aebe65a16d&from=0&to=5';
+let endUrl = '&app_id=bddad298&app_key=aef7ebaa03f59a99ac50f1aebe65a16d&from=0&to=10';
 let healthQuery = '';
 for (let i = 0; i < checkedValues.length; i ++){
   healthQuery += '&health=' + checkedValues[i];
