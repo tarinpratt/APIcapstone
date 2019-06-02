@@ -8,7 +8,11 @@ fetch(fetchUrl)
 }
 
 function displayResults(responseJson) {
+  
   $('.results').empty();
+  if(responseJson.message === undefined){
+    alert('Ingredient invalid! Please enter valid ingredient items in the search bar.');
+  }
 for (let i = 0; i < responseJson.hits.length; i++){
   let healthLabels = responseJson.hits[i].recipe.healthLabels;
   let sepLabels = healthLabels.join(', ');
