@@ -17,9 +17,9 @@ for (let i = 0; i < responseJson.hits.length; i++){
   let calories = responseJson.hits[i].recipe.calories;
   let newCal = calories.toFixed();
 
-$('.results').append(`<li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3><p>${sepDietLabels}</p>
-<p>${sepLabels}</p><p>Calories: ${newCal}</p>
-<a href=${responseJson.hits[i].recipe.url} target="_blank"><img src='${responseJson.hits[i].recipe.image}'></a>`)
+$('.results').append(`<li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3><p class="diet">${sepDietLabels}</p>
+<p class="health">${sepLabels}</p><p class="calories">Calories: ${newCal}</p>
+<a href=${responseJson.hits[i].recipe.url} target="_blank"><img class="foodImg" src='${responseJson.hits[i].recipe.image}'></a>`)
 };
 $('.results').removeClass('hidden');
 }
