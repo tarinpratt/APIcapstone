@@ -11,10 +11,8 @@
   .results {
     list-style: none;
   }
-  input {
-    display: inline-block;
-  }
-  input:hover {
+  
+  input[type="checkbox"]:hover {
     cursor: pointer;
   }
    #listOfRecipes {
@@ -42,11 +40,18 @@
      padding: 5px;
      border-radius: 5px;
    }
-   img:hover {
+   .submitButton:hover {
+     cursor: pointer;
+  
+   }
+ 
+
+   .foodImg:hover {
      border: yellow 4px solid;
      border-radius: 10px;
    }
   
-  footer {
-    padding-top: 300px;
+  #edamam-badge {
+    position: fixed;
+    bottom: 0;
   }
