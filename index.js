@@ -5,7 +5,11 @@ fetch(fetchUrl)
 .then(response => response.json())
 .then(responseJson => displayResults(responseJson))
 .catch(error => alert('Something went wrong. Try again later.'));
+
 }
+
+
+
 
 function displayResults(responseJson) {
   if(responseJson.count === 0){
@@ -21,16 +25,17 @@ for (let i = 0; i < responseJson.hits.length; i++){
   let calories = responseJson.hits[i].recipe.calories;
   let newCal = calories.toFixed();
   let ingredients = responseJson.hits[i].recipe.ingredientLines;
-  let ingredientList = ingredients.join(', ');
-
+  let ingredientList = ingredients.map((ingredient) =>
+    `<li>${ingredient}</li>`
+);
+  let excludeCommas = ingredientList.join(' ');
 $('.results').append(`
 <li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3>
   <a href=${responseJson.hits[i].recipe.url} target="_blank"><img class="foodImg" src='${responseJson.hits[i].recipe.image}'></a>
 <p class="diet">${sepDietLabels}</p>
 <p class="health">${sepLabels}</p>
-<p class="ingredients">${ingredientList}</p>
+  <ul class="ingredients"><h3>Ingredients</h3>${excludeCommas}</ul>
 <p class="calories">Calories: ${newCal}</p>
-
 `)
 };
 $('.results').removeClass('hidden');
@@ -74,4 +79,6 @@ $(function() {
 console.log('app loaded waiting for submit');
 getValue();
 });
+
+
 
