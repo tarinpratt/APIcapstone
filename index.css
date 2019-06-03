@@ -23,10 +23,7 @@
   .results {
     list-style: none;
   }
-  p.ingredients {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
+  
 
   .icons {
     border-radius: 50px;
@@ -61,6 +58,7 @@
      display: flex;
      flex-direction: column;
      border-radius: 10px;
+     color: #0B6E4F;
    }
    p {
      color: #0B6E4F;
@@ -75,6 +73,9 @@
      color: #08A045;
    }
   
+    ul.ingredients {
+    text-align: left;
+    }
 
   
    .submitButton {
@@ -89,18 +90,23 @@
      cursor: pointer;
    }
 
+   .foodImg:hover {
+     border-radius: 10px;
+     border: #08A045 solid 3px;
+   }
+  
+   
+   
    .foodImg {
      width: 150px;
      height: 150px;
      border-radius: 10px;
    }
  
-   .foodImg:hover {
-     border: #6BBF59 4px solid;
-     border-radius: 10px;
-   }
+   
   
   #edamam-badge {
     position: relative;
     bottom: 0;
+    
   }
