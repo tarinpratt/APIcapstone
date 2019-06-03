@@ -101,6 +101,6 @@
    }
   
   #edamam-badge {
-    position: fixed;
+    position: relative;
     bottom: 0;
   }
