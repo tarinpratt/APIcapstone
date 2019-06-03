@@ -8,7 +8,9 @@ fetch(fetchUrl)
 }
 
 function displayResults(responseJson) {
-  
+  if(responseJson.count === 0){
+    alert('Invalid ingredient. Please try again.')
+  }
   $('.results').empty();
  
 for (let i = 0; i < responseJson.hits.length; i++){
