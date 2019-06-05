@@ -87,6 +87,7 @@
 
   .nuts {
     display: block;
+    padding: 10px;
   }
 
   .vegan {
@@ -232,3 +233,69 @@
     bottom: 0;
     
   }
+
+  @media screen and (max-width: 1024px){
+    .centered {
+      padding-top: 33px;
+      position: absolute;
+      margin-right: auto;
+      margin-left: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px;
+      width: 150px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      opacity: 3;
+      border: white solid 1px;
+    }
+  }
+
+  @media screen and (min-width: 530px){
+    .searchFood {
+      display: inline-block;
+    }
+
+  }
+
+
+  @media screen and (min-width: 700px){
+    header {
+      display: inline-block;
+      margin-top: 100px;
+      width: 500px;
+    }
+    .restrictions {
+      margin-bottom: 50px;
+      display: inline-block;
+      width: 500px;
+      background-color: rgba(174, 212, 182, 0.3);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      
+    }
+    .searchFood {
+      display: inline-block;
+      width: 500px;
+    }
+
+    .nuts {
+      display: inline-block;
+     
+    }
+
+
+  }
+
+  @media screen and (min-width: 1015px){
+    header{
+      display: block;
+    }
+
+    .restrictions{
+      display: block;
+    }
+
+    
