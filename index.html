@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
@@ -35,6 +37,7 @@
                     <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
                         <input type="checkbox" class="checkbox" name="vegetarian" value="vegetarian">Vegetarian
                     </section>
+                    
                 </section>
                     
                 <label for="listOfRecipes"></label>
@@ -42,11 +45,18 @@
                     <h5>What foods would you like in your recipes?</h5>
                         <input placeholder="e.g. cheese" type="text" name="listOfRecipes" id="listOfRecipes" required/>
                         <input class="submitButton" type="submit" value="Get Recipes">
+                        <div class="scrollButton hidden"><a href="#recipes"><i class="fas fa-arrow-down"></i>
+                            </a>
+                        </div>
+
                 </div>
+
             </form>
         </main>
     </div>
+        <div id="recipes">
         <div class="results hidden"><ul></ul></div>
+        </div>
     <footer id="edamam-badge" data-color="transparent"></footer>
     <script src="index.js"></script>
 </body>
