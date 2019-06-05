@@ -6,10 +6,8 @@
    
     <title>Picky Eater</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -23,34 +21,31 @@
         <main>
             <form class="recipeForm">
                 <label for="recipeRestrictions">
-                    <section class="restrictions">
-                    <section class="nuts">
-                    <img src="images/nonuts.jpg" class="icons"alt="no nut image">
-                        <input type="checkbox" class="checkbox" name="peanut-free" value="peanut-free">Peanut Allergy
-                        <input type="checkbox" class="checkbox" name="tree-nut-free" value="tree-nut-free">Tree Nut Allergy
-                    </section>
+                <section class="restrictions">
                     <section class="vegan">
-                    <img src="images/vegan.jpg" class="icons" alt="vegan image">
+                        <img src="images/vegan.jpg" class="icons" alt="vegan image">
                         <input type="checkbox" class="checkbox" name="vegan" value="vegan">Vegan
                     </section>
                     <section class="vegetarian">
-                    <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
+                        <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
                         <input type="checkbox" class="checkbox" name="vegetarian" value="vegetarian">Vegetarian
+                    </section>  
+                    <section class="nuts">
+                        <img src="images/nonuts.jpg" class="icons"alt="no nut image">
+                        <input type="checkbox" class="checkbox" name="peanut-free" value="peanut-free&health=tree-nut-free">Nut Allergy
                     </section>
-                    
+
                 </section>
-                    
-                <label for="listOfRecipes"></label>
-                <div class="searchFood">
+                <section class="searchFood">
                     <h5>What foods would you like in your recipes?</h5>
                         <input placeholder="e.g. cheese" type="text" name="listOfRecipes" id="listOfRecipes" required/>
                         <input class="submitButton" type="submit" value="Get Recipes">
-                        <div class="scrollButton hidden"><a href="#recipes"><i class="fas fa-arrow-down"></i>
+                        <div class="scrollButton hidden">
+                            <a href="#recipes">
+                                <i class="fas fa-arrow-down"></i>
                             </a>
                         </div>
-
-                </div>
-
+                    </section>
             </form>
         </main>
     </div>
