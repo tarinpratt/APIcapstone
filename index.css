@@ -99,9 +99,6 @@
     padding: 10px;
   }
 
-  
-
-
   .checkbox:hover {
     cursor: pointer;
   }
@@ -125,6 +122,18 @@
      font-size: 12px;
      font-family: 'Montserrat', sans-serif;
    }
+   .scrollButton a{
+     display: inline-block;
+     padding: 10px;
+     font-size: 27px;
+     color: white;
+     text-decoration: none;
+   }
+
+
+
+
+
 
    li {
      margin-top: 15px;
