@@ -7,32 +7,46 @@
     <title>Picky Eater</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Picky Eats</h1>
-        <h2>Find recipes that cater to your food restriction needs.</h2>
-    <form class="recipeForm">
-          <label for="recipeRestrictions">
-          
-          <img src="images/nonuts.jpg" class="icons"alt="no nut image">
-          <input type="checkbox" class="checkbox" name="peanut-free" value="peanut-free">Peanut Allergy
-          <input type="checkbox" class="checkbox" name="tree-nut-free" value="tree-nut-free">Tree Nut Allergy
-          
-          <img src="images/vegan.jpg" class="icons" alt="vegan image">
-          <input type="checkbox" class="checkbox"
-          name="vegan" value="vegan">Yes, I'm Vegan
-          <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
-          <input type="checkbox" class="checkbox" name="vegetarian" value="vegetarian">Yes, I'm Vegetarian
-          <label for="listOfRecipes"></label>
-          <input placeholder="ANY and ALL ingredients here!" type="text" name="listOfRecipes" id="listOfRecipes" required/>
-          <input class="submitButton" type="submit" value="Get Recipes">
-    </form>
+        <header><h1>Picky Eats</h1>
+            <h2>Find recipes that cater to your food restriction needs.</h2>
+        </header>
+        <main>
+            <form class="recipeForm">
+                <label for="recipeRestrictions">
+                    <section class="restrictions">
+                    <section class="nuts">
+                    <img src="images/nonuts.jpg" class="icons"alt="no nut image">
+                        <input type="checkbox" class="checkbox" name="peanut-free" value="peanut-free">Peanut Allergy
+                        <input type="checkbox" class="checkbox" name="tree-nut-free" value="tree-nut-free">Tree Nut Allergy
+                    </section>
+                    <section class="vegan">
+                    <img src="images/vegan.jpg" class="icons" alt="vegan image">
+                        <input type="checkbox" class="checkbox" name="vegan" value="vegan">Vegan
+                    </section>
+                    <section class="vegetarian">
+                    <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
+                        <input type="checkbox" class="checkbox" name="vegetarian" value="vegetarian">Vegetarian
+                    </section>
+                </section>
+                    
+                <label for="listOfRecipes"></label>
+                <div class="searchFood">
+                    <h5>What foods would you like in your recipes?</h5>
+                        <input placeholder="e.g. cheese" type="text" name="listOfRecipes" id="listOfRecipes" required/>
+                        <input class="submitButton" type="submit" value="Get Recipes">
+                </div>
+            </form>
+        </main>
     </div>
-    <div class="results hidden"><ul></ul></div>
+        <div class="results hidden"><ul></ul></div>
     <footer id="edamam-badge" data-color="transparent"></footer>
     <script src="index.js"></script>
 </body>
