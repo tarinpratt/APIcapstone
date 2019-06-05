@@ -44,9 +44,12 @@ $('.results').append(`
 <p class="health">${sepLabels}</p>
   <ul class="ingredients"><h4>Ingredients Needed</h4>${excludeCommas}</ul>
 <p class="calories">${newCal} Calories</p>
+
 `)
 };
 $('.results').removeClass('hidden');
+$('.scrollButton').removeClass('hidden');
+
 }
 
 function getCheckedValues(){
