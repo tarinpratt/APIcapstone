@@ -31,11 +31,19 @@ for (let i = 0; i < responseJson.hits.length; i++){
   let excludeCommas = ingredientList.join(' ');
 $('.results').append(`
 <li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3>
-  <a href=${responseJson.hits[i].recipe.url} target="_blank"><img class="foodImg" src='${responseJson.hits[i].recipe.image}'></a>
+  <a href=${responseJson.hits[i].recipe.url} target="_blank">
+  <div class="imgText">
+    <img class="foodImg" src='${responseJson.hits[i].recipe.image}'>
+    <div class="centered">
+    Get Instructions
+    </div>
+  </div>
+  </a>
 <p class="diet">${sepDietLabels}</p>
+<h4>Recipe Diet Restrictions: </h4>
 <p class="health">${sepLabels}</p>
-  <ul class="ingredients"><h3>Ingredients</h3>${excludeCommas}</ul>
-<p class="calories">Calories: ${newCal}</p>
+  <ul class="ingredients"><h4>Ingredients Needed</h4>${excludeCommas}</ul>
+<p class="calories">${newCal} Calories</p>
 `)
 };
 $('.results').removeClass('hidden');
