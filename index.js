@@ -5,7 +5,6 @@ fetch(fetchUrl)
 .then(response => response.json())
 .then(responseJson => displayResults(responseJson))
 .catch(error => alert('Something went wrong. Try again later.'));
-
 }
 
 
@@ -13,7 +12,7 @@ fetch(fetchUrl)
 
 function displayResults(responseJson) {
   if(responseJson.count === 0){
-    alert('Invalid ingredient. Please try again.')
+    alert('Invalid entry. Please enter different types of foods, ingredients, or cuisines.')
   }
   $('.results').empty();
  
@@ -44,12 +43,10 @@ $('.results').append(`
 <p class="health">${sepLabels}</p>
   <ul class="ingredients"><h4>Ingredients Needed</h4>${excludeCommas}</ul>
 <p class="calories">${newCal} Calories</p>
-
 `)
 };
 $('.results').removeClass('hidden');
 $('.scrollButton').removeClass('hidden');
-
 }
 
 function getCheckedValues(){
