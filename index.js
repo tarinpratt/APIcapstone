@@ -8,17 +8,15 @@ fetch(fetchUrl)
 }
 
 
-
-
 function displayResults(responseJson) {
   if(responseJson.count === 0){
-    alert('Invalid entry. Please enter different types of foods, ingredients, or cuisines.')
+    alert('Invalid entry. Please enter a different type of food, ingredient, or cuisine.')
   }
   $('.results').empty();
  
 for (let i = 0; i < responseJson.hits.length; i++){
   let healthLabels = responseJson.hits[i].recipe.healthLabels;
-  let sepLabels = healthLabels.join(', ');
+  let sepHealthLabels = healthLabels.join(', ');
   let dietLabels = responseJson.hits[i].recipe.dietLabels;
   let sepDietLabels = dietLabels.join(', ');
   let calories = responseJson.hits[i].recipe.calories;
@@ -40,7 +38,7 @@ $('.results').append(`
   </a>
 <p class="diet">${sepDietLabels}</p>
 <h4>Recipe Diet Restrictions: </h4>
-<p class="health">${sepLabels}</p>
+<p class="health">${sepHealthLabels}</p>
   <ul class="ingredients"><h4>Ingredients Needed</h4>${excludeCommas}</ul>
 <p class="calories">${newCal} Calories</p>
 `)
