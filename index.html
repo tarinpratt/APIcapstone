@@ -20,28 +20,29 @@
         </header>
         <main>
             <form class="recipeForm">
-                
                 <section class="restrictions">
                     <section class="vegan">
-                        <img src="images/vegan.jpg" class="icons" alt="vegan image">
-                        <input type="checkbox" class="checkbox" name="vegan" value="vegan">Vegan
+                        <img src="images/vegan.jpg" class="icons" alt="vegan icon image">
+                        <label for="veganCheckbox"><input type="checkbox" id="veganCheckbox" name="vegan" value="vegan">Vegan</label>
                     </section>
                     <section class="vegetarian">
-                        <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian image">
-                        <input type="checkbox" class="checkbox" name="vegetarian" value="vegetarian">Vegetarian
+                        <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian icon image">
+                        <label for="vegetarianCheckbox"><input type="checkbox" id="vegetarianCheckbox" name="vegetarian" value="vegetarian">Vegetarian</label>
                     </section>  
                     <section class="nuts">
-                        <img src="images/nonuts.jpg" class="icons"alt="no nut image">
-                        <input type="checkbox" class="checkbox" name="peanut-free" value="peanut-free&health=tree-nut-free">Nut Allergy
+                        <img src="images/nonuts.jpg" class="icons" alt="nut allergy icon image">
+                        <label for="nutAllergyCheckbox"><input type="checkbox" id="nutAllergyCheckbox" name="peanut-free" value="peanut-free&health=tree-nut-free">Nut Allergy</label>
                     </section>
 
                 </section>
                 <section class="searchFood">
                     <h5>What foods would you like in your recipes?</h5>
-                        <input placeholder="e.g. cheese" type="text" name="listOfRecipes" id="listOfRecipes" required/>
+                    <label for="foodSearchBar">
+                        <input placeholder="e.g. cheese" type="text" name="foodSearchBar" id="foodSearchBar" required/>
+                    </label>
                         <input class="submitButton" type="submit" value="Get Recipes">
                         <div class="scrollButton hidden">
-                            <a href="#recipes">
+                            <a href="#recipes" for="arrowButtonDown">
                                 <i class="fas fa-arrow-down"></i>
                             </a>
                         </div>
