@@ -14,46 +14,48 @@
     <script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
 <body>
+    <main role="main">
     <div class="container">
-        <header><h1>Picky Eats</h1>
+        <header role="banner"><h1>Picky Eats</h1>
             <h2>Find recipes that cater to your food restriction needs.</h2>
         </header>
-        <main>
+         
             <form class="recipeForm">
-                <section class="restrictions">
+                <div class="restrictions">
                     <section class="vegan">
-                        <img src="images/vegan.jpg" class="icons" alt="vegan icon image">
+                        <img src="images/vegan.jpg" class="icons" alt="vegan icon">
                         <label for="veganCheckbox"><input type="checkbox" id="veganCheckbox" name="vegan" value="vegan">Vegan</label>
                     </section>
                     <section class="vegetarian">
-                        <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian icon image">
+                        <img src ="images/vegetarians.jpg" class="icons" alt="vegetarian icon">
                         <label for="vegetarianCheckbox"><input type="checkbox" id="vegetarianCheckbox" name="vegetarian" value="vegetarian">Vegetarian</label>
                     </section>  
                     <section class="nuts">
-                        <img src="images/nonuts.jpg" class="icons" alt="nut allergy icon image">
+                        <img src="images/nonuts.jpg" class="icons" alt="nut allergy icon">
                         <label for="nutAllergyCheckbox"><input type="checkbox" id="nutAllergyCheckbox" name="peanut-free" value="peanut-free&health=tree-nut-free">Nut Allergy</label>
                     </section>
-
-                </section>
-                <section class="searchFood">
+                </div>
+                <div class="searchFood">
                     <h3 class="searchBarHeading">What foods would you like in your recipes?</h3>
                     <label for="foodSearchBar">
-                        <input placeholder="e.g. cheese" type="text" name="foodSearchBar" id="foodSearchBar" required/>
+                        <input placeholder="e.g. cheese" type="text" name="food-search-bar" id="foodSearchBar" required/>
                     </label>
-                        <input class="submitButton" type="submit" value="Get Recipes">
+                        <button class="submitButton" type="submit" value="Get Recipes">Get Recipes</button>
                         <div class="scrollButton hidden">
+                            <label for="scroll-down-button">
                             <a href="#recipes">
                                 <i class="fas fa-arrow-down"></i>
                             </a>
+                            </label>
                         </div>
-                    </section>
+                </div>
             </form>
-        </main>
-    </div>
+        </div>
+    </main>
         <div id="recipes">
         <div class="results hidden"><ul></ul></div>
         </div>
-    <footer id="edamam-badge" data-color="transparent"></footer>
+    <footer role="contentinfo" id="edamam-badge" data-color="transparent"></footer>
     <script src="index.js"></script>
 </body>
 </html>
