@@ -13,7 +13,7 @@
     }
 
   header {
-    background-color: rgba(174, 212, 182, 0.5);
+    background-color: rgba(174, 212, 182, 0.6);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -63,7 +63,7 @@
   }
 
   .restrictions {
-    background-color: rgba(174, 212, 182, 0.5);
+    background-color: rgba(174, 212, 182, 0.6);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -214,7 +214,7 @@
       width: 150px;
       opacity: 0;
       transition: .5s ease;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
     }
     
@@ -240,7 +240,7 @@
       right: 0;
       height: 150px;
       width: 150px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
       opacity: 3;
       border: white solid 1px;
@@ -260,7 +260,7 @@
       margin-bottom: 50px;
       display: inline-block;
       width: 500px;
-      background-color: rgba(174, 212, 182, 0.5);
+      background-color: rgba(174, 212, 182, 0.6);
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px; 
     }
@@ -331,7 +331,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: rgba(174, 212, 182, 0.5);
+  background-color: rgba(174, 212, 182, 0.6);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
