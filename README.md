@@ -16,7 +16,7 @@ Landing Page:
 ![Picky Eats screenshot](/images/PickyEatsRecipes.jpg)
 
 ## **Built With**
-    * HTML
-    * CSS
-    * JavaScript
-    * jQuery
+* HTML
+* CSS
+* JavaScript
+* jQuery
