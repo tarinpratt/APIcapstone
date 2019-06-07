@@ -20,3 +20,7 @@ Landing Page:
 * CSS
 * JavaScript
 * jQuery
+
+## **API**
+* Edamam
+* Shareaholic
