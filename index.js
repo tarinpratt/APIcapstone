@@ -17,8 +17,7 @@ function displayResults(responseJson) {
 for (let i = 0; i < responseJson.hits.length; i++){
   let healthLabels = responseJson.hits[i].recipe.healthLabels;
   let sepHealthLabels = healthLabels.join(', ');
-  let dietLabels = responseJson.hits[i].recipe.dietLabels;
-  let sepDietLabels = dietLabels.join(', ');
+  let linkUrl = responseJson.hits[i].recipe.url;
   let calories = responseJson.hits[i].recipe.calories;
   let newCal = calories.toFixed();
   let ingredients = responseJson.hits[i].recipe.ingredientLines;
@@ -28,19 +27,22 @@ for (let i = 0; i < responseJson.hits.length; i++){
   let excludeCommas = ingredientList.join(' ');
 $('.results').append(`
 <li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3>
-  <a href=${responseJson.hits[i].recipe.url} target="_blank">
-  <div class="imgText">
-    <img class="foodImg" src='${responseJson.hits[i].recipe.image}'>
-    <div class="centered">
-    Get Instructions
+    <a href=${responseJson.hits[i].recipe.url} target="_blank">
+    <div class="imgText">
+      <img class="foodImg" src='${responseJson.hits[i].recipe.image}' alt="recipe image">
+      <div class="centered">
+      Get Instructions
+      </div>
     </div>
-  </div>
-  </a>
-<p class="diet">${sepDietLabels}</p>
+    </a>
+ 
+  <p class="calories">${newCal} Calories</p>
 <h4>Recipe Diet Restrictions: </h4>
-<p class="health">${sepHealthLabels}</p>
-  <ul class="ingredients"><h4>Ingredients Needed</h4>${excludeCommas}</ul>
-<p class="calories">${newCal} Calories</p>
+  <p class="health">${sepHealthLabels}</p>
+<h4 class="ingredientsNeeded">Ingredients Needed</h4>
+  <ul class="ingredients">${excludeCommas}</ul>
+  <a href="https://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8644c386db736b4002e952e2ba7c9f43&service=5&link=${linkUrl}" target="_blank">Share on Facebook</a>
+</li>
 `)
 };
 $('.results').removeClass('hidden');
@@ -71,7 +73,7 @@ return rootUrl + healthQuery + endUrl;
 function getValue(){
 $('.recipeForm').submit(event => {
 event.preventDefault();
-const textValue = $('#listOfRecipes').val();
+const textValue = $('#foodSearchBar').val();
 console.log(textValue);
 let checkedValues = getCheckedValues();
 let fetchUrl = buildSearchUrl(textValue, checkedValues);
