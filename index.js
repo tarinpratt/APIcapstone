@@ -26,6 +26,7 @@ for (let i = 0; i < responseJson.hits.length; i++){
 );
   let excludeCommas = ingredientList.join(' ');
 $('.results').append(`
+
 <li><h3><a href=${responseJson.hits[i].recipe.url} target="_blank">${responseJson.hits[i].recipe.label}</a></h3>
     <a href=${responseJson.hits[i].recipe.url} target="_blank">
     <div class="imgText">
@@ -35,13 +36,18 @@ $('.results').append(`
       </div>
     </div>
     </a>
- 
   <p class="calories">${newCal} Calories</p>
+  
+  
 <h4>Recipe Diet Restrictions: </h4>
   <p class="health">${sepHealthLabels}</p>
 <h4 class="ingredientsNeeded">Ingredients Needed</h4>
   <ul class="ingredients">${excludeCommas}</ul>
-  <a href="https://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8644c386db736b4002e952e2ba7c9f43&service=5&link=${linkUrl}" target="_blank">Share on Facebook</a>
+  
+  <div class="facebookButton">
+  <a href="https://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8644c386db736b4002e952e2ba7c9f43&service=5&link=${linkUrl}" target="_blank">
+  <i class="fab fa-facebook-square"></i>Share on Facebook</a>
+  </div>
 </li>
 `)
 };
