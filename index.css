@@ -132,42 +132,14 @@
      display: inline-block;
      padding: 10px;
      font-size: 27px;
-     color: white;
+     color: #04692c;
      text-decoration: none;
    }
 
-   li {
-     margin-top: 15px;
-     background-color: #DDB771; 
-     display: flex;
-     flex-direction: column;
-     border-radius: 10px;
-     color: #685044;
+   .scrollButton a:hover {
+    color: rgb(228, 83, 39);
    }
 
-   p {
-     color: #685044;
-     font-size: 15px;
-   }
-
-   p.calories {
-     color: #073B3A;
-   }
-
-   li h3 a {
-     text-decoration: none;
-     color: #073B3A;
-   }
-
-   li h3 a:hover {
-     color: #4E3D42;
-   }
-  
-    ul.ingredients {
-    text-align: left;
-    }
-
-  
    .submitButton {
      padding: 10px;
      margin-bottom: 10px;
@@ -186,6 +158,15 @@
      border-color: white;
    }
 
+   li {
+    margin-top: 15px;
+    background-color: #DDB771; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #685044;
+  }
+
    .foodImg:hover {
      border-radius: 10px;
    }
@@ -203,6 +184,10 @@
       color: white;
       font-size: 20px;
     }
+
+    .imgText:hover .centered {
+      opacity: 3;
+  }
    
     .centered {
       padding-top: 33px;
@@ -220,12 +205,39 @@
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
     }
-    
-    .imgText:hover .centered {
-        opacity: 3;
+ 
+    li h3 a {
+      text-decoration: none;
+      color: #073B3A;
+      padding-left: 5px;
+      padding-right: 5px;
     }
-   
-  
+ 
+    li h3 a:hover {
+      color: rgb(228, 83, 39);
+    }
+
+    p {
+      color: #685044;
+      font-size: 15px;
+    }
+
+    p.health {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    ul.ingredients {
+      text-align: left;
+      padding-bottom: 20px;
+      }
+ 
+     h4.ingredientsNeeded {
+       text-align: left;
+       padding-left: 40px;
+       padding-top: 20px;
+     }
+ 
   #edamam-badge {
     position: relative;
     bottom: 0;
@@ -247,6 +259,10 @@
       border-radius: 10px;
       opacity: 3;
       border: white solid 1px;
+    }
+    .centered:hover {
+      border: white solid 3px;
+
     }
   }
 
@@ -284,6 +300,7 @@
 
     .results {
       width: 500px;
+      padding-left: 0;
       margin-right: auto;
       margin-left: auto;
     }
@@ -307,67 +324,77 @@
       border-right-color: transparent;
       border-left-color: transparent;
       padding-bottom: 15px;
- }
+    }
 
- h1 {
-   display: inline-block;
-   border-bottom-color: transparent;    
-   padding-right: 30px;
- }
+     h1 {
+      display: inline-block;
+      border-bottom-color: transparent;    
+      padding-right: 30px;
+    }
 
- h2 {
-  display: inline-block;
-  padding-right: 0;
- }
+    h2 {
+      display: inline-block;
+      padding-right: 0;
+    }
 
- h5 {
-   padding-top: 50px;
-   padding-bottom: 15px;
- }
+    h5 {
+      padding-top: 50px;
+      padding-bottom: 15px;
+    }
 
- main {
-  display: flex;
-  flex-direction: row;
- }
+    main {
+      display: flex;
+      flex-direction: row;
+    }
 
- form.recipeForm {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  background-color: rgba(174, 212, 182, 0.6);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
+    form.recipeForm {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background-color: rgba(174, 212, 182, 0.6);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; 
+    }
 
- .restrictions{
-  background-color: transparent;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
- } 
+    .restrictions{
+      background-color: transparent;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    } 
 
- .searchFood {
-  background-color: transparent;
- }
+    .searchFood {
+      background-color: transparent;
+      padding-top: 40px;
+    }
 
- #foodSearchBar {
-   width: 300px;
-   margin-right: 10px;
- }
+    #foodSearchBar {
+      margin-top: 20px;
+      width: 300px;
+      margin-right: 10px;
+    }
 
- .results {
-   width: 1000px;
-   display: flex;
-   flex-wrap: wrap;
- }
+    .ingredients li {
+      margin: 15px;
+    }
 
- .results li {
-   flex: 0 0 44%;
-   margin: 30px;
- }
+    ul.results {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1000px;
+    }
 
- .ingredients li {
-   margin: 15px;
- }
+    ul.results li {
+      display: flex; 
+      margin: 30px;
+      flex: 0 0 44%;
+    }
+
+    ul.ingredients li {
+      margin: 18px;
+    }
+
+
+
 }
