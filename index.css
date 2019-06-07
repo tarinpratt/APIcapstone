@@ -237,6 +237,32 @@
        padding-left: 40px;
        padding-top: 20px;
      }
+
+     .facebookButton a{
+       
+        color: #073B3A;
+       font-family: 'Playfair Display', serif;
+       text-decoration: underline;
+       font-size: 18px;
+       padding-bottom: 10px;
+     }
+
+     .facebookButton a i{
+       padding-right: 10px;
+       font-size: 25px;
+       color: white;
+       padding-bottom: 10px;
+     }
+
+     .facebookButton a i:hover {
+      color: rgb(228, 83, 39);
+     }
+
+     .facebookButton a:hover {
+      color: rgb(228, 83, 39);
+     }
+
+     
  
   #edamam-badge {
     position: relative;
@@ -394,6 +420,10 @@
     ul.ingredients li {
       margin: 18px;
     }
+
+
+
+
 
 
 
