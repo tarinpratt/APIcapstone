@@ -1,5 +1,5 @@
 # **Picky Eats**
-Try it out!
+
 [PickyEats](https://tarinpratt.github.io/PickyEats/)
 
 ![Picky Eats screenshot](/images/PickyEatsScreenShot.jpg)
@@ -10,7 +10,7 @@ Picky Eats returns a list of 10 recipes that coincide with the users search pref
 
 ![Picky Eats screenshot](/images/PickyEatsRecipes.jpg)
 
-**Technologies used**
+* **Technologies used**
     * HTML
     * CSS
     * JavaScript
