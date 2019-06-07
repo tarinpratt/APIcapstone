@@ -37,8 +37,6 @@ $('.results').append(`
     </div>
     </a>
   <p class="calories">${newCal} Calories</p>
-  
-  
 <h4>Recipe Diet Restrictions: </h4>
   <p class="health">${sepHealthLabels}</p>
 <h4 class="ingredientsNeeded">Ingredients Needed</h4>
