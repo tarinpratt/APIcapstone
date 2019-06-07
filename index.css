@@ -10,6 +10,7 @@
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
     }
 
   header {
@@ -54,6 +55,7 @@
   }
 
   .searchBarHeading {
+    display: block;
     color: #073B3A;
     font-family: 'Playfair Display', serif;
     margin-top: 10px;
@@ -131,7 +133,7 @@
    .scrollButton a{
      display: inline-block;
      padding: 10px;
-     font-size: 27px;
+     font-size: 23px;
      color: #04692c;
      text-decoration: none;
    }
@@ -142,6 +144,7 @@
 
    .submitButton {
      padding: 10px;
+     margin-top: 10px;
      margin-bottom: 10px;
      border-radius: 5px;
      color: white;
@@ -238,9 +241,13 @@
        padding-top: 20px;
      }
 
+     .facebookButton {
+       margin-top: auto;
+     }
+
      .facebookButton a{
        
-        color: #073B3A;
+       color: #073B3A;
        font-family: 'Playfair Display', serif;
        text-decoration: underline;
        font-size: 18px;
@@ -290,6 +297,18 @@
       border: white solid 3px;
 
     }
+  }
+
+
+  @media screen and (max-width: 499px) {
+    .searchFood {
+      margin-top: 5px;
+    }
+
+    ul.results {
+      padding-left: 0;
+    }
+
   }
 
 
@@ -401,9 +420,6 @@
       margin-right: 10px;
     }
 
-    .ingredients li {
-      margin: 15px;
-    }
 
     ul.results {
       display: flex;
@@ -412,19 +428,27 @@
     }
 
     ul.results li {
+      position: relative;
       display: flex; 
       margin: 30px;
       flex: 0 0 44%;
     }
 
+    ul.ingredients {
+      padding-bottom: 40px;
+    }
+
+
     ul.ingredients li {
       margin: 18px;
     }
 
-
-
-
-
+    .facebookButton {
+      position: absolute;
+      bottom: 0;
+      margin-left: 25%;
+     
+    }
 
 
 }
