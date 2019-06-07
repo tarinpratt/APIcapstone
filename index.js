@@ -1,19 +1,19 @@
 'use strict';
 
+//fetch url 
 function getRecipes(fetchUrl) {
-fetch(fetchUrl)
-.then(response => response.json())
-.then(responseJson => displayResults(responseJson))
-.catch(error => alert('Something went wrong. Try again later.'));
+  fetch(fetchUrl)
+  .then(response => response.json())
+  .then(responseJson => displayResults(responseJson))
+  .catch(error => alert('Something went wrong. Try again later.'));
 }
 
-
+//display results to DOM 
 function displayResults(responseJson) {
   if(responseJson.count === 0){
     alert('Invalid entry. Please enter a different type of food, ingredient, or cuisine.')
   }
   $('.results').empty();
- 
 for (let i = 0; i < responseJson.hits.length; i++){
   let healthLabels = responseJson.hits[i].recipe.healthLabels;
   let sepHealthLabels = healthLabels.join(', ');
@@ -40,7 +40,6 @@ $('.results').append(`
   <p class="health">${sepHealthLabels}</p>
 <h4 class="ingredientsNeeded">Ingredients Needed</h4>
   <ul class="ingredients">${excludeCommas}</ul>
-  
   <div class="facebookButton">
   <a href="https://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8644c386db736b4002e952e2ba7c9f43&service=5&link=${linkUrl}" target="_blank">
   <i class="fab fa-facebook-square"></i>Share on Facebook</a>
@@ -48,45 +47,43 @@ $('.results').append(`
 </li>
 `)
 };
-$('.results').removeClass('hidden');
-$('.scrollButton').removeClass('hidden');
+  $('.results').removeClass('hidden');
+  $('.scrollButton').removeClass('hidden');
 }
 
+//get checkbox values
 function getCheckedValues(){
-let checkedValues = [];
-$('input:checked').each(function(i){
-checkedValues[i] = $(this).val();
+  let checkedValues = [];
+  $('input:checked').each(function(i){
+  checkedValues[i] = $(this).val();
 });
-console.log(checkedValues)
 return checkedValues;
 }
 
+//build url with user input values
 function buildSearchUrl(textValue, checkedValues) {
-let rootUrl = 'https://api.edamam.com/search?q=' + textValue;
-let endUrl = '&app_id=bddad298&app_key=aef7ebaa03f59a99ac50f1aebe65a16d&from=0&to=10';
-let healthQuery = '';
+  let rootUrl = 'https://api.edamam.com/search?q=' + textValue;
+  let endUrl = '&app_id=bddad298&app_key=aef7ebaa03f59a99ac50f1aebe65a16d&from=0&to=10';
+  let healthQuery = '';
 for (let i = 0; i < checkedValues.length; i ++){
   healthQuery += '&health=' + checkedValues[i];
 }
-console.log(healthQuery)
-console.log(rootUrl + healthQuery + endUrl)
 return rootUrl + healthQuery + endUrl;
 }
 
+//get input value from user 
 function getValue(){
-$('.recipeForm').submit(event => {
-event.preventDefault();
-const textValue = $('#foodSearchBar').val();
-console.log(textValue);
-let checkedValues = getCheckedValues();
-let fetchUrl = buildSearchUrl(textValue, checkedValues);
-getRecipes(fetchUrl);
-});
+  $('.recipeForm').submit(event => {
+  event.preventDefault();
+  const textValue = $('#foodSearchBar').val();
+  let checkedValues = getCheckedValues();
+  let fetchUrl = buildSearchUrl(textValue, checkedValues);
+  getRecipes(fetchUrl);
+  });
 }
 
 
 
 $(function() {
-console.log('app loaded waiting for submit');
-getValue();
+  getValue();
 });
